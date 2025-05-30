@@ -6,7 +6,7 @@ export interface CardProps {
 
 export default function Card({title, icon, value}: CardProps) {
   return (
-    <div className="text-center text-primary bg-details min-w-56 rounded-xl text-xl font-bold pb-1">
+    <div className="text-center text-primary bg-details min-w-56 rounded-xl text-xl font-bold pb-1 shadow-xs xl:shadow-xl shadow-shadow">
       <h3 className='flex align-middle text-center justify-center gap-2 m-4'>
         {icon ? <>{icon} {title}</> : <>{title}</>}:
         </h3>

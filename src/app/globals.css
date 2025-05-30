@@ -24,6 +24,7 @@
   --color-foreground: var(--foreground);
 
   --color-ghost: var(--ghost);
+  --color-shadow: var(--shadow);
 
   --color-details: var(--details);
   --color-link: var(--link);
@@ -49,6 +50,7 @@
     --foreground: #E0E0E0;
     --details: #2C2C2C;
     --ghost: #E0E0E060;
+    --shadow: #2C2C2C60;
     --link: #4F9DFB;
     --error: #FF6B6B;
     --text-primary:#E0E0E0;
@@ -66,6 +68,7 @@
     --foreground: #121212;
     --details: #B0B0B0;
     --ghost: #12121260;
+    --shadow: #2C2C2C60;
     --link: #1A73E8;
     --error: #D32F2F;
     --text-primary: #1A1A1A;
