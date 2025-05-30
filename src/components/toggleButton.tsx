@@ -1,9 +1,16 @@
 'use client'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import { getSystemTheme } from '@/shared/utils/getSystemTheme'
 
 export default function ToggleButton() {
-  const [isLightMode, setIsLightMode] = useState(false)
+
+  const [isLightMode, setIsLightMode] = useState<boolean>(false); 
+
+  useEffect(() => {
+    const userPrefersLightMode = getSystemTheme() === 'light';
+    setIsLightMode(userPrefersLightMode);
+  }, []);
 
 
   useEffect(() => {
