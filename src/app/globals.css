@@ -4,8 +4,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-details: var(--details);
-  --color-links: var(--links);
-  --color-errors: var(--errors);
+  --color-link: var(--link);
+  --color-error: var(--error);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-info: var(--text-info);
@@ -26,8 +26,8 @@
   --color-ghost: var(--ghost);
 
   --color-details: var(--details);
-  --color-links: var(--links);
-  --color-errors: var(--errors);
+  --color-link: var(--link);
+  --color-error: var(--error);
 
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
@@ -49,8 +49,8 @@
     --foreground: #E0E0E0;
     --details: #2C2C2C;
     --ghost: #E0E0E060;
-    --links: #4F9DFB;
-    --errors: #FF6B6B;
+    --link: #4F9DFB;
+    --error: #FF6B6B;
     --text-primary:#E0E0E0;
     --text-secondary:#B0B0B0;
     --text-info:#66B2FF;
@@ -64,10 +64,10 @@
   .light_mode {
     --background: #E0E0E0;
     --foreground: #121212;
-    --details: #F0F0F0;
+    --details: #B0B0B0;
     --ghost: #12121260;
-    --links: #1A73E8;
-    --errors: #D32F2F;
+    --link: #1A73E8;
+    --error: #D32F2F;
     --text-primary: #1A1A1A;
     --text-secondary: #555555;
     --text-info:#3B82F6;

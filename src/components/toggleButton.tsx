@@ -27,9 +27,9 @@ export default function ToggleButton() {
       aria-label="Toggle LightMode/DarkMode"
     >
       {isLightMode ? (
-        <div className='bg-gray-300 rounded-full p-1'> <Image src="/mini-moon.svg" alt="Moon icon" width={24} height={24} /></div>
+        <div className='bg-details/50 hover:bg-details rounded-full p-1'> <Image src="/mini-moon.svg" alt="Moon icon" width={20} height={20} /></div>
       ) : (
-        <div className='bg-gray-300/20  rounded-full p-1'> <Image src="/mini-sun.svg" alt="Sun icon" width={24} height={24} /></div>
+        <div className='bg-details/50 hover:bg-details rounded-full p-1'> <Image src="/mini-sun.svg" alt="Sun icon" width={20} height={20} /></div>
       )}
     </button>
   )
