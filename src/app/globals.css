@@ -1,26 +1,86 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-details: var(--details);
+  --color-links: var(--links);
+  --color-errors: var(--errors);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-info: var(--text-info);
+  --color-text-success: var(--text-success);
+  --color-text-warning: var(--text-warning);
+  --color-text-muted: var(--text-muted);
+  --color-text-note: var(--text-note);
+  --color-text-accent: var(--text-accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-galindo: var(--font-galindo);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-ghost: var(--ghost);
+
+  --color-details: var(--details);
+  --color-links: var(--links);
+  --color-errors: var(--errors);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-info: var(--text-info);
+  --color-text-success: var(--text-success);
+  --color-text-warning: var(--text-warning);
+  --color-text-muted: var(--text-muted);
+  --color-text-note: var(--text-note);
+  --color-text-accent: var(--text-accent);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-galindo: var(--font-galindo);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #121212;
+    --foreground: #E0E0E0;
+    --details: #2C2C2C;
+    --ghost: #E0E0E060;
+    --links: #4F9DFB;
+    --errors: #FF6B6B;
+    --text-primary:#E0E0E0;
+    --text-secondary:#B0B0B0;
+    --text-info:#66B2FF;
+    --text-success:#81C784;
+    --text-warning:#FFCA28;
+    --text-muted:#AAAAAA;
+    --text-note:#B39DDB;
+    --text-accent:#4DD0E1;
+  }
+
+  .light_mode {
+    --background: #E0E0E0;
+    --foreground: #121212;
+    --details: #F0F0F0;
+    --ghost: #12121260;
+    --links: #1A73E8;
+    --errors: #D32F2F;
+    --text-primary: #1A1A1A;
+    --text-secondary: #555555;
+    --text-info:#3B82F6;
+    --text-success:#2E7D32;
+    --text-warning:#B8860B;
+    --text-muted:#888888;
+    --text-note:#6B5B95;
+    --text-accent:#0097A7;
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-primary);
+  font-family:  Arial, Helvetica, sans-serif;
 }
