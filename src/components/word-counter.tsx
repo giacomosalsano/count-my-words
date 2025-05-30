@@ -76,19 +76,25 @@ if (words) {
 
   return (
     <div className="items-center justify-center text-xl space-y-2">
-      <div>
-        <h2 className="flex text-4xl font-extrabold text-center align-middle justify-center">Counter</h2>
-      </div>
-      <Textarea 
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        name='textArea-value'  
-        placeholder="type or paste your text here" 
-        className="flex max-w-6xl text-bold w-full"/>
+      <div className="flex flex-col gap-2 bg-details rounded-xl p-4">
+        <div className="">
+          <h2 className="flex text-4xl font-extrabold text-center align-middle justify-center">Counter</h2>
+        </div>
+        <div>
+          <Textarea 
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            name='textArea-value'  
+            placeholder="type or paste your text here" 
+            className="flex max-w-6xl text-bold w-full"/>
+          </div>
+        </div>
       <div className="space-y-2 items-center justify-center xl:flex xl:space-x-2 xl:space-y-0">
-        <Card title='Caracteres'
-          icon={<TbAbc size={'1.5rem'}/>} 
-          value={characterCount}/>
+        <div className="flex flex-col ">
+          <Card title='Caracteres'
+            icon={<TbAbc size={'1.5rem'}/>} 
+            value={characterCount}/>
+          </div>
         <div className="grid grid-cols-2 gap-2 xl:flex xl:gap-0 xl:space-x-2">
           {cardsContent.map(({title, icon, value}) => (
             <Card key={title} title={title}
