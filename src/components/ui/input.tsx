@@ -8,7 +8,7 @@ function Input({ className, type, ...props }: React.ComponentProps<"input">) {
       type={type}
       data-slot="input"
       className={cn(
-        "file:text-foreground rounded-xl border hover:border-2  hover:border-foreground bg-transparent p-3 shadow-xs outline-none",
+        "file:text-foreground rounded-2xl border hover:border-2  hover:border-foreground bg-transparent p-3 shadow-xs outline-none",
   
         className
       )}
