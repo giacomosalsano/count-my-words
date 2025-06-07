@@ -16,7 +16,7 @@ export default function Header() {
   }
 
   return (
-    <div className="flex w-full justify-between items-center align-middle bg-ghost p-2 xl:p-4 rounded-2xl text-primary shadow-xs shadow-shadow">
+    <div className="flex w-full justify-between items-center align-middle bg-ghost/50 p-2 xl:p-4 rounded-2xl text-primary shadow-xs shadow-shadow">
       <Image
         src="/count-my-word-full-logo-black-Photoroom.png"
         alt="Logo"

@@ -14,7 +14,7 @@ export default function WordsListCard({
   return (
     <div
       key={position}
-      className="w-full text-center font-bold align-middle rounded-2xl justify-between p-4 border border-primary"
+      className="w-full text-center font-bold align-middle rounded-2xl justify-between p-4 border border-primary hover:z-10 hover:scale-110 hover:bg-background hover:shadow-2xl hover:shadow-shadow hover:transition-all"
     >
       <div className="flex justify-between">
         <p className="text-text-info p-4">{position + 1}.</p>

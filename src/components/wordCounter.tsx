@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { Textarea } from '@/components/ui/textarea'
-import Card, { CardProps } from './countCard'
+import CountCard, { CountCardProps } from './countCard'
 import { TbSpaceOff, TbAbc, TbTextCaption } from 'react-icons/tb'
 import { VscWholeWord } from 'react-icons/vsc'
 import { MdOutlineShortText } from 'react-icons/md'
@@ -18,7 +18,7 @@ export default function WordCounter() {
   const [paragraphCount, setParagraphCount] = useState(0)
   const [topWords, setTopWords] = useState<TopWordsProps[]>([])
 
-  const cardsContent: CardProps[] = [
+  const cardsContent: CountCardProps[] = [
     {
       title: 'Palavras',
       icon: <VscWholeWord size={'1.5rem'} />,
@@ -90,15 +90,16 @@ export default function WordCounter() {
       </div>
       <div className="items-center justify-center xl:flex space-y-2 xl:space-x-2 xl:space-y-0">
         <div className="flex flex-col">
-          <Card
+          <CountCard
             title="Caracteres"
             icon={<TbAbc size={'1.5rem'} />}
             value={characterCount}
+            tooltipDescription="Número Total de Caracteres"
           />
         </div>
         <div className="grid grid-cols-2 gap-2 xl:flex xl:gap-0 xl:space-x-2">
           {cardsContent.map(({ title, icon, value }) => (
-            <Card key={title} title={title} icon={icon} value={value} />
+            <CountCard key={title} title={title} icon={icon} value={value} />
           ))}
         </div>
       </div>

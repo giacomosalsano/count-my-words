@@ -31,13 +31,13 @@ export default function SectionCreate({
   return (
     <section
       id={formattedID}
-      className={`py-16 ${shadowOn ? 'shadow-2xl' : ''} rounded-2xl`}
+      className={`py-16 ${shadowOn ? 'shadow-2xl shadow-shadow' : ''} rounded-2xl`}
     >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             {titleContent}
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-text-secondary text-lg max-w-2xl mx-auto">
               {description}
             </p>
           </div>

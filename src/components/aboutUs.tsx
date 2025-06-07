@@ -2,18 +2,18 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Target, Shield, Zap, LucideIcon } from 'lucide-react'
 import SectionCreate from './sectionCreate'
 
-type Feature = {
+type FeatureType = {
   icon: LucideIcon
   title: string
   description: string
 }
 
-type Audience = {
+type AudienceType = {
   title: string
   description: string
 }
 
-const features: Feature[] = [
+const features: FeatureType[] = [
   {
     icon: Target,
     title: 'Precisão',
@@ -34,7 +34,7 @@ const features: Feature[] = [
   },
 ]
 
-const audiences: Audience[] = [
+const audiences: AudienceType[] = [
   {
     title: 'Para Escritores',
     description:
@@ -57,7 +57,7 @@ const audiences: Audience[] = [
   },
 ]
 
-const FeatureCard = ({ icon: Icon, title, description }: Feature) => (
+const FeatureCard = ({ icon: Icon, title, description }: FeatureType) => (
   <Card className="text-center p-6">
     <CardContent className="pt-6">
       <div className="flex justify-center mb-4">
@@ -69,8 +69,8 @@ const FeatureCard = ({ icon: Icon, title, description }: Feature) => (
   </Card>
 )
 
-const AudienceCard = ({ title, description }: Audience) => (
-  <div>
+const AudienceCard = ({ title, description }: AudienceType) => (
+  <div className="bg-ghost/20 rounded-xl p-4">
     <h4 className="font-semibold text-foreground mb-2">{title}</h4>
     <p className="text-muted-foreground">{description}</p>
   </div>
