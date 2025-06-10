@@ -14,15 +14,15 @@ export default function WordsListCard({
   return (
     <div
       key={position}
-      className="w-full text-center font-bold align-middle rounded-2xl justify-between p-4 border border-primary hover:z-10 hover:scale-110 hover:bg-background hover:shadow-2xl hover:shadow-shadow hover:transition-all"
+      className="w-full text-center font-bold align-middle rounded-2xl justify-between p-4 border-2 border-border hover:z-10 hover:scale-110 hover:bg-background hover:shadow-2xl hover:shadow-shadow hover:transition-all text-xl"
     >
       <div className="flex justify-between">
-        <p className="text-text-info p-4">{position + 1}.</p>
+        <p className="text-primary-color p-4">{position + 1}.</p>
         <p className="text-text-primary p-4 truncate">{word}</p>
         <Tooltip
           content={`A palavra "${word}" aparece ${value} ${value > 1 ? 'vezes' : 'vez'} no seu texto.`}
         >
-          <p className="bg-details/20 rounded-2xl p-4 text-text-primary shadow shadow-shadow">
+          <p className="bg-menu-bg rounded-2xl p-4 text-text-white shadow shadow-shadow">
             {value}x
           </p>
         </Tooltip>

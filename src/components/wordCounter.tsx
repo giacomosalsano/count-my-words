@@ -8,7 +8,11 @@ import { MdOutlineShortText } from 'react-icons/md'
 import WordsList, { TopWordsProps } from './wordsList'
 import SectionCreate from './sectionCreate'
 
-export default function WordCounter() {
+interface WordCounterProps {
+  skeleton?: boolean
+}
+
+export default function WordCounter({ skeleton = false }: WordCounterProps) {
   const [text, setText] = useState('')
   const [wordCount, setWordCount] = useState(0)
   const [characterCount, setCharacterCount] = useState(0)
@@ -23,21 +27,25 @@ export default function WordCounter() {
       title: 'Palavras',
       icon: <VscWholeWord size={'1.5rem'} />,
       value: wordCount,
+      tooltipDescription: 'Número Total de Palavras',
     },
     {
       title: 'Frases',
       icon: <MdOutlineShortText size={'1.5rem'} />,
       value: sentenceCount,
+      tooltipDescription: 'Número Total de Frases',
     },
     {
       title: 'Parágrafos',
       icon: <TbTextCaption size={'1.5rem'} />,
       value: paragraphCount,
+      tooltipDescription: 'Número Total de Parágrafos',
     },
     {
       title: 'Sem Espaços',
       icon: <TbSpaceOff size={'1.5rem'} />,
       value: characterCountWithoutSpaces,
+      tooltipDescription: 'Número Total de Caracteres sem contar os Espaços',
     },
   ]
 
@@ -98,8 +106,14 @@ export default function WordCounter() {
           />
         </div>
         <div className="grid grid-cols-2 gap-2 xl:flex xl:gap-0 xl:space-x-2">
-          {cardsContent.map(({ title, icon, value }) => (
-            <CountCard key={title} title={title} icon={icon} value={value} />
+          {cardsContent.map(({ title, icon, value, tooltipDescription }) => (
+            <CountCard
+              key={title}
+              title={title}
+              icon={icon}
+              value={value}
+              tooltipDescription={tooltipDescription}
+            />
           ))}
         </div>
       </div>
@@ -113,6 +127,7 @@ export default function WordCounter() {
       title="Contador de Palavras"
       description="Cole ou digite seu texto abaixo para analisar suas estatísticas"
       content={content}
+      skeleton={skeleton}
     />
   )
 }

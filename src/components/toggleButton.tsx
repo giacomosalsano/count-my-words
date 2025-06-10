@@ -2,8 +2,13 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { getSystemTheme } from '@/shared/utils/getSystemTheme'
+import { Skeleton } from './ui/skeleton'
 
-export default function ToggleButton() {
+interface ToggleButtonProps {
+  skeleton?: boolean
+}
+
+export default function ToggleButton({ skeleton = false }: ToggleButtonProps) {
   const [isLightMode, setIsLightMode] = useState<boolean>(false)
 
   useEffect(() => {
@@ -31,19 +36,21 @@ export default function ToggleButton() {
     setIsLightMode((prev) => !prev)
   }
 
-  return (
+  return skeleton ? (
+    <Skeleton className="w-10 h-10 rounded-full bg-details p-2" />
+  ) : (
     <button
       onClick={toggleMode}
-      className="p-2 flex items-center gap-2 transition-colors"
+      className="p-2 flex items-center transition-colors"
       aria-label="Toggle LightMode/DarkMode"
     >
       {isLightMode ? (
-        <div className="bg-details/50 hover:bg-details rounded-full p-1">
+        <div className="bg-background/50 hover:bg-background rounded-full p-2">
           {' '}
           <Image src="/mini-moon.svg" alt="Moon icon" width={20} height={20} />
         </div>
       ) : (
-        <div className="bg-details/50 hover:bg-details rounded-full p-1">
+        <div className="bg-background hover:bg-background/50 rounded-full p-2">
           {' '}
           <Image src="/mini-sun.svg" alt="Sun icon" width={20} height={20} />
         </div>

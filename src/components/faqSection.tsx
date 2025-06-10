@@ -6,6 +6,10 @@ import {
 } from '@/components/ui/accordion'
 import SectionCreate from './sectionCreate'
 
+interface FAQItem {
+  skeleton?: boolean
+}
+
 const faqItems = [
   {
     question: 'Como funciona o contador de palavras?',
@@ -42,12 +46,13 @@ const content = (
   </Accordion>
 )
 
-export function FAQSection() {
+export function FAQSection({ skeleton = false }: FAQItem) {
   return (
     <SectionCreate
       title="FAQ"
       description="Tire suas dúvidas sobre como usar o contador de palavras"
       content={content}
+      skeleton={skeleton}
     />
   )
 }

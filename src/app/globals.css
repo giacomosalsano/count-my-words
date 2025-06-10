@@ -1,57 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  --background: #E0E0E0;
-  --foreground: #121212;
-  --details: #B0B0B0;
-  --ghost: #12121260;
-  --shadow: #2C2C2C60;
-  --link: #1A73E8;
-  --error: #D32F2F;
+  --background: #F2F4F2;
+  --menu-bg: #3A453D;
+  --foreground: #2D2D2D;
+  --foreground-hover: #1A1A1A;
+  --primary-color: #00613C;
+  --secondary-color: #870A28;
+  --tertiary-color: #A6A6A6;
+  --details: #353535;
+  --border: #4D4D4D;
+  --ghost: #2C2C2C40;
+  --shadow: #3A453D30;
+  --link: #1E88E5;
+  --error: #B00020;
   --text-primary: #1A1A1A;
-  --text-secondary: #555555;
-  --text-tertiary: #E0E0E0;
-  --text-info: #3B82F6;
-  --text-success: #2E7D32;
-  --text-warning: #B8860B;
-  --text-muted: #888888;
-  --text-note: #6B5B95;
-  --text-accent: #0097A7;
+  --text-secondary: #3C3C3C;
+  --text-tertiary: #808080;
+  --text-white: #FFFFFF;
+  --text-info: #4C7EA8;
+  --text-success: #2E7D55;
+  --text-warning: #F9A825;
+  --text-muted: #6B6B6B;
+  --text-note: #6E4A60;
+  --text-accent: #00836D;
 
   --color-background: var(--background);
+  --color-menu-bg: var(--menu-bg);
   --color-foreground: var(--foreground);
+  --color-foreground-hover: var(--foreground-hover);
+  --color-primary-color: var(--primary-color);
+  --color-secondary-color: var(--secondary-color);
+  --color-tertiary-color: var(--tertiary-color);
   --color-details: var(--details);
+  --color-border: var(--border);
   --color-link: var(--link);
   --color-error: var(--error);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-tertiary: var(--text-tertiary);
-  --color-text-info: var(--text-info);
-  --color-text-success: var(--text-success);
-  --color-text-warning: var(--text-warning);
-  --color-text-muted: var(--text-muted);
-  --color-text-note: var(--text-note);
-  --color-text-accent: var(--text-accent);
-
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-galindo: var(--font-galindo);
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
-  --color-ghost: var(--ghost);
-  --color-shadow: var(--shadow);
-
-  --color-details: var(--details);
-  --color-link: var(--link);
-  --color-error: var(--error);
-
-  --color-text-primary: var(--text-primary);
-  --color-text-secondary: var(--text-secondary);
-  --color-text-tertiary: var(--text-tertiary);
+  --color-text-white: var(--text-white);
   --color-text-info: var(--text-info);
   --color-text-success: var(--text-success);
   --color-text-warning: var(--text-warning);
@@ -65,23 +53,63 @@
 }
 
 html.dark {
-  --background: #121212;
-  --foreground: #E0E0E0;
-  --details: #2C2C2C;
-  --ghost: #E0E0E060;
-  --shadow: #E0E0E015;
-  --link: #4F9DFB;
-  --error: #FF6B6B;
-  --text-primary: #FFFFFF;
-  --text-secondary: #B0B0B0;
-  --text-tertiary: #121212;
-  --text-info: #66B2FF;
-  --text-success: #81C784;
+  --background: #121212; 
+  --menu-bg: #3A453D; 
+  --foreground: #DDDDDD;
+  --foreground-hover: #FFFFFF;
+  --details: #2B2B2B;
+  --border: #3A3A3A;
+  --ghost: #FFFFFF20;
+  --shadow: #3A453D30;
+  --link: #64B5F6;
+  --error: #EF5350;
+  --text-primary: #F2F2F2;
+  --text-secondary: #BBBBBB;
+  --text-tertiary: #666666;
+  --text-white: #FFFFFF;
+  --text-info: #78AEDD;
+  --text-success: #4CAF50;
   --text-warning: #FFCA28;
-  --text-muted: #AAAAAA;
-  --text-note: #B39DDB;
-  --text-accent: #4DD0E1;
+  --text-muted: #999999;
+  --text-note: #A780A0;
+  --text-accent: #4DB6AC;
 }
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-menu-bg: var(--menu-bg);
+  --color-foreground: var(--foreground);
+  --color-foreground-hover: var(--foreground-hover);
+
+  --color-primary-color: var(--primary-color);
+  --color-secondary-color: var(--secondary-color);
+  --color-tertiary-color: var(--tertiary-color);
+
+  --color-ghost: var(--ghost);
+  --color-shadow: var(--shadow);
+
+  --color-details: var(--details);
+  --color-border: var(--border);
+  --color-link: var(--link);
+  --color-error: var(--error);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-text-white: var(--text-white);
+  --color-text-info: var(--text-info);
+  --color-text-success: var(--text-success);
+  --color-text-warning: var(--text-warning);
+  --color-text-muted: var(--text-muted);
+  --color-text-note: var(--text-note);
+  --color-text-accent: var(--text-accent);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-galindo: var(--font-galindo);
+}
+
 
 body {
   background: var(--background);

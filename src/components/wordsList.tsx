@@ -33,7 +33,7 @@ export default function WordsList({ title, topWords }: WordsListProps) {
         ))}
       </div>
     ) : (
-      <div className="flex items-center justify-center border border-foreground rounded-2xl">
+      <div className="flex items-center justify-center border-2 border-border rounded-2xl">
         <Tooltip content="Cole seu texto na área acima e veja aqui as 10 palavras mais frequentes">
           <div className="flex flex-col items-center justify-center gap-3 m-4 p-4">
             <p>

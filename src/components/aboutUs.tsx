@@ -2,6 +2,10 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Target, Shield, Zap, LucideIcon } from 'lucide-react'
 import SectionCreate from './sectionCreate'
 
+interface AboutSectionProps {
+  skeleton?: boolean
+}
+
 type FeatureType = {
   icon: LucideIcon
   title: string
@@ -58,25 +62,25 @@ const audiences: AudienceType[] = [
 ]
 
 const FeatureCard = ({ icon: Icon, title, description }: FeatureType) => (
-  <Card className="text-center p-6">
-    <CardContent className="pt-6">
+  <Card className="text-center p-6 hover:z-10 hover:scale-105 2xl:hover:scale-110 hover:bg-background hover:shadow-2xl hover:shadow-shadow hover:transition-all">
+    <CardContent className="p-2">
       <div className="flex justify-center mb-4">
-        <Icon className="h-12 w-12 text-primary" />
+        <Icon className="h-12 w-12 text-menu-bg" />
       </div>
-      <h3 className="text-xl font-semibold text-foreground mb-2">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
+      <h3 className="text-xl font-semibold text-text-primary mb-2">{title}</h3>
+      <p className="text-text-secondary">{description}</p>
     </CardContent>
   </Card>
 )
 
 const AudienceCard = ({ title, description }: AudienceType) => (
-  <div className="bg-ghost/20 rounded-xl p-4">
-    <h4 className="font-semibold text-foreground mb-2">{title}</h4>
-    <p className="text-muted-foreground">{description}</p>
+  <div className="bg-menu-bg/30 rounded-xl p-4 hover:z-10 hover:scale-105 2xl:hover:scale-110  hover:shadow-2xl hover:shadow-shadow hover:transition-all">
+    <h4 className="font-semibold text-text-primary mb-2">{title}</h4>
+    <p className="text-text-secondary">{description}</p>
   </div>
 )
 
-export default function AboutSection() {
+export default function AboutSection({ skeleton = false }: AboutSectionProps) {
   const content = (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
@@ -86,7 +90,7 @@ export default function AboutSection() {
       </div>
 
       <div className="text-center">
-        <h3 className="text-2xl font-bold text-foreground mb-4">
+        <h3 className="text-2xl font-bold text-text-primary mb-4">
           Por que usar o Count My Words?
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
@@ -103,6 +107,7 @@ export default function AboutSection() {
       title="Sobre Nós"
       description="O Count My Words é uma ferramenta gratuita e fácil de usar para análise de texto. Desenvolvida para escritores, estudantes, profissionais e qualquer pessoa que precise analisar estatísticas de texto de forma rápida e precisa"
       content={content}
+      skeleton={skeleton}
     />
   )
 }
