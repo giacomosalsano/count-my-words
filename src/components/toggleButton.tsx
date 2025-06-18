@@ -1,8 +1,8 @@
 'use client'
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
 import { getSystemTheme } from '@/shared/utils/getSystemTheme'
 import { Skeleton } from './ui/skeleton'
+import { Moon, SunDim } from 'lucide-react'
 
 interface ToggleButtonProps {
   skeleton?: boolean
@@ -47,12 +47,12 @@ export default function ToggleButton({ skeleton = false }: ToggleButtonProps) {
       {isLightMode ? (
         <div className="bg-background/50 hover:bg-background rounded-full p-2">
           {' '}
-          <Image src="/mini-moon.svg" alt="Moon icon" width={20} height={20} />
+          <Moon size={20} className="text-text-info fill-text-info" />
         </div>
       ) : (
         <div className="bg-background hover:bg-background/50 rounded-full p-2">
           {' '}
-          <Image src="/mini-sun.svg" alt="Sun icon" width={20} height={20} />
+          <SunDim size={20} className="text-text-warning fill-text-warning" />
         </div>
       )}
     </button>

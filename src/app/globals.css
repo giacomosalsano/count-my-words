@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F2F4F2;
-  --menu-bg: #3A453D;
+  --background: #F5F5F5;
+  --menu-bg: #3C3C3C;
   --foreground: #2D2D2D;
   --foreground-hover: #1A1A1A;
   --primary-color: #00613C;
@@ -54,7 +54,7 @@
 
 html.dark {
   --background: #121212; 
-  --menu-bg: #3A453D; 
+  --menu-bg: #3C3C3C; 
   --foreground: #DDDDDD;
   --foreground-hover: #FFFFFF;
   --details: #2B2B2B;
