@@ -62,7 +62,7 @@ export default function Header({ skeleton = false }: HeaderProps) {
       {buttonsContent}
     </Skeleton>
   ) : (
-    <div className="sticky top-2 flex w-full justify-between items-center align-middle bg-menu-bg p-2 xl:p-4 rounded-2xl text-primary shadow-xl shadow-shadow">
+    <div className="sticky top-2 flex w-full justify-between items-center align-middle bg-menu-bg p-2 xl:p-4 rounded-2xl text-primary shadow-xl shadow-shadow z-99">
       <Image
         src="/count-my-word-full-logo-black-Photoroom.png"
         alt="Logo"

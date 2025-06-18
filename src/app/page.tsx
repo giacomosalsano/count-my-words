@@ -4,6 +4,7 @@ import Header from '../components/header'
 import WordCounter from '../components/wordCounter'
 import AboutSection from '@/components/aboutUs'
 import { useEffect, useState } from 'react'
+import Footer from '@/components/footer'
 
 export default function Home() {
   const [isPageLoading, setIsPageLoading] = useState(true)
@@ -24,6 +25,7 @@ export default function Home() {
       <WordCounter skeleton={isPageLoading} />
       <AboutSection skeleton={isPageLoading} />
       <FAQSection skeleton={isPageLoading} />
+      <Footer />
     </div>
   )
 }
