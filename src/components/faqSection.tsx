@@ -29,7 +29,7 @@ const faqItems = [
   {
     question: 'Há um limite de tamanho para o texto?',
     answer:
-      'Não há limite rígido, mas para melhor performance recomendamos textos de até 100.000 caracteres. Para textos muito grandes, a análise pode ficar mais lenta dependendo do seu dispositivo.',
+      'Não há limite rígido, mas, para melhor performance, recomendamos textos de até 100.000 caracteres. Para textos muito grandes, a análise pode ficar mais lenta dependendo do seu dispositivo.',
   },
 ]
 
