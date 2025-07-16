@@ -19,6 +19,33 @@ export default function Home() {
     }
   }, [])
 
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash
+      if (hash) {
+        const element = document.getElementById(hash.substring(1))
+        if (element) {
+          const headerOffset = 80
+          const elementPosition =
+            element.getBoundingClientRect().top + window.scrollY
+          const offsetPosition = elementPosition - headerOffset
+
+          setTimeout(() => {
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth',
+            })
+          }, 100)
+        }
+      }
+    }
+
+    handleHashChange()
+
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
+  }, [])
+
   return (
     <div className="grid m-2 xl:m-4 gap-2 transition-all">
       <Header skeleton={isPageLoading} />

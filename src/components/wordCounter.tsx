@@ -93,7 +93,7 @@ export default function WordCounter({ skeleton = false }: WordCounterProps) {
           onChange={(e) => setText(e.target.value)}
           name="textArea-value"
           placeholder="type or paste your text here"
-          className="flex w-full text-bold max-h-96 max-w-6xl"
+          className="flex w-full text-bold max-h-96 max-w-6xl border-2 border-primary-color/20 focus:border-primary-color focus:ring-2 focus:ring-primary-color/20 transition-all"
         />
       </div>
       <div className="items-center justify-center xl:flex space-y-2 xl:space-x-2 xl:space-y-0">

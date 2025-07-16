@@ -62,20 +62,20 @@ const audiences: AudienceType[] = [
 ]
 
 const FeatureCard = ({ icon: Icon, title, description }: FeatureType) => (
-  <Card className="text-center p-6 hover:z-10 hover:scale-105 2xl:hover:scale-110 hover:bg-background hover:shadow-2xl hover:shadow-shadow hover:transition-all">
+  <Card className="text-center p-6 hover:z-10 hover:scale-105 2xl:hover:scale-110 hover:bg-primary-accent hover:shadow-primary-glow/20 hover:shadow-2xl  hover:transition-all border-primary-color/30 border-2">
     <CardContent className="p-2">
       <div className="flex justify-center mb-4">
-        <Icon className="h-12 w-12 text-menu-bg" />
+        <Icon className="h-12 w-12 text-primary-color" />
       </div>
-      <h3 className="text-xl font-semibold text-text-primary mb-2">{title}</h3>
+      <h3 className="text-xl font-semibold mb-2 text-primary-color">{title}</h3>
       <p className="text-text-secondary">{description}</p>
     </CardContent>
   </Card>
 )
 
 const AudienceCard = ({ title, description }: AudienceType) => (
-  <div className="bg-menu-bg/30 rounded-xl p-4 hover:z-10 hover:scale-105 2xl:hover:scale-110  hover:shadow-2xl hover:shadow-shadow hover:transition-all">
-    <h4 className="font-semibold text-text-primary mb-2">{title}</h4>
+  <div className="bg-primary-accent/50 border-primary-color/20 border rounded-xl p-4 hover:z-10 hover:scale-105 2xl:hover:scale-110 hover:bg-primary-accent/70 hover:shadow-primary-glow/20 hover:shadow-2xl  hover:transition-all">
+    <h4 className="font-semibold mb-2 text-primary-color">{title}</h4>
     <p className="text-text-secondary">{description}</p>
   </div>
 )

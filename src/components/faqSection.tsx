@@ -36,10 +36,17 @@ const faqItems = [
 const content = (
   <Accordion type="single" collapsible className="w-full" defaultValue="item-0">
     {faqItems.map((item, index) => (
-      <AccordionItem key={index} value={`item-${index}`}>
-        <AccordionTrigger>{item.question}</AccordionTrigger>
+      <AccordionItem key={index} value={`item-${index}`} className="mb-2">
+        <AccordionTrigger
+          className="hover:bg-primary-accent data-[state=open]:bg-primary-accent rounded-lg transition-all no-underline px-2"
+          style={{ textDecoration: 'none' }}
+        >
+          <span className="font-semibold text-primary-color">
+            {item.question}
+          </span>
+        </AccordionTrigger>
         <AccordionContent>
-          <p>{item.answer}</p>
+          <p className="text-text-secondary p-2">{item.answer}</p>
         </AccordionContent>
       </AccordionItem>
     ))}

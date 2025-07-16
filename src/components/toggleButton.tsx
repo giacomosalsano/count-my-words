@@ -37,7 +37,7 @@ export default function ToggleButton({ skeleton = false }: ToggleButtonProps) {
   }
 
   return skeleton ? (
-    <Skeleton className="w-10 h-10 rounded-full bg-details p-2" />
+    <Skeleton className="w-10 h-10 rounded-full bg-border p-2" />
   ) : (
     <button
       onClick={toggleMode}
@@ -45,14 +45,18 @@ export default function ToggleButton({ skeleton = false }: ToggleButtonProps) {
       aria-label="Toggle LightMode/DarkMode"
     >
       {isLightMode ? (
-        <div className="bg-background/50 hover:bg-background rounded-full p-2">
-          {' '}
-          <Moon size={20} className="text-text-info fill-text-info" />
+        <div className="bg-background/20 hover:bg-background/50 rounded-full p-2">
+          <Moon
+            size={20}
+            className="text-text-primary-color fill-text-primary-color"
+          />
         </div>
       ) : (
-        <div className="bg-background hover:bg-background/50 rounded-full p-2">
-          {' '}
-          <SunDim size={20} className="text-text-warning fill-text-warning" />
+        <div className="bg-foreground/20 hover:bg-foreground/50 rounded-full p-2">
+          <SunDim
+            size={20}
+            className="text-text-primary-color fill-text-primary-color"
+          />
         </div>
       )}
     </button>
